@@ -9,7 +9,6 @@ class Board:
 
     def __init__(self):
         self.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
-        # self.board = [['X', 'O', 'X'], ['O', 'X', 'X'], ['O', ' ', 'O']]
         self.last_move = None
 
     def add_move(self, move):
