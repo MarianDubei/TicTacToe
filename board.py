@@ -4,8 +4,8 @@ import copy
 
 
 class Board:
-    COMPUTER_SIGN = "O"
-    HUMAN_SIGN = "X"
+    COMPUTER_SIGN = "X"
+    HUMAN_SIGN = "O"
 
     def __init__(self):
         self.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
@@ -73,9 +73,9 @@ class Board:
             if len(empties) == 1:
                 pos = empties[0]
                 board1 = copy.deepcopy(board)
-                board1[pos[0]][pos[1]] = Board.HUMAN_SIGN
+                board1[pos[0]][pos[1]] = Board.COMPUTER_SIGN
                 board2 = copy.deepcopy(board)
-                board2[pos[0]][pos[1]] = Board.HUMAN_SIGN
+                board2[pos[0]][pos[1]] = Board.COMPUTER_SIGN
                 tree.insert_left(board1)
                 tree.insert_right(board2)
                 return
